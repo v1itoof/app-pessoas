@@ -1,6 +1,7 @@
 import './App.css';
-import Home from './components/Home';
+import Pessoas from './components/Pessoas';
 import Sobre from './components/Sobre';
+import Login from './components/Login';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -19,14 +20,15 @@ function App() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/sobre">Sobre</Nav.Link>
+                <Nav.Link as={Link} to="/login">Login</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Pessoas />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/sobre' element={<Sobre />} />
         </Routes>
       </div>
