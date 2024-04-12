@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Mensagem from './Mensagem';
 import { Button, Form, Modal, Table, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Pessoas extends Component {
@@ -373,9 +374,9 @@ export class Pessoas extends Component {
                 <td>{pessoa.data_nascimento}</td>
                 <td>{pessoa.estado_civil}</td>
                 <td>
-                  <div>
-                    <Button variant="link" onClick={() => this.abrirModalAtualizar(pessoa.id)}>Atualizar</Button>
-                    <Button variant="link" onClick={() => this.excluirPessoa(pessoa.id)}>Excluir</Button>
+                  <div className='d-flex align-items-center'>
+                    <Link className='btn btn-secondary me-3' to={`/atualizar/${pessoa.id}`}>Atualizar</Link>
+                    <Button variant="danger" onClick={() => this.excluirPessoa(pessoa.id)}>Excluir</Button>
                   </div>
                 </td>
               </tr>

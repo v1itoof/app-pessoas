@@ -1,11 +1,11 @@
 import './App.css';
 import Pessoas from './components/Pessoas';
 import Sobre from './components/Sobre';
+import AtualizarPessoa from './components/AtualizarPessoa';
 import Login from './components/Login';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Link, Route } from 'react-router-dom';
 
@@ -29,6 +29,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Pessoas />} />
           <Route path='/login' element={<Login />} />
+          <Route path="/atualizar/:id" element={<AtualizarPessoa />} />
           <Route path='/sobre' element={<Sobre />} />
         </Routes>
       </div>

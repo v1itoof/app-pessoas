@@ -5,7 +5,7 @@ class Mensagem extends React.Component {
         const { sucesso, mensagem } = this.props;
 
         return (
-            <div className={`my-3 alert ${sucesso ? 'alert-success' : 'alert-danger'}`} role="alert">
+            <div className={`mt-3 alert ${sucesso ? 'alert-success' : 'alert-danger'}`} role="alert">
                 {mensagem}
             </div>
         );
